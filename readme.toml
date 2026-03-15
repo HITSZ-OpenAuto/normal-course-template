@@ -22,6 +22,8 @@ content = """
 • 期中考试: 30%
 • 期末考试: 40%
 """
+# author 是可选的
+author = { name = "昵称", link = "https://github.com/xxx", date = "2025-03" }
 
 [[sections]]
 title = "学习资料"
