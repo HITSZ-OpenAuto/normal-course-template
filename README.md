@@ -35,8 +35,14 @@ content = "章节内容"
 
 ## lecturers 字段结构 (新 schema)
 
+顺序: `lecturers.intro` → `lecturers.items` → `lecturers.summary`
+
 ```toml
 [lecturers]
+
+# 教师简介 (在教师列表之前)
+[[lecturers.intro]]
+content = "教师团队介绍"
 
 [[lecturers.items]]
 name = "教师姓名"
@@ -44,6 +50,10 @@ name = "教师姓名"
 [[lecturers.items.reviews]]
 content = "评价内容"
 author = { name = "昵称", link = "链接", date = "2025-03" }
+
+# 教师总结 (在教师列表之后)
+[[lecturers.summary]]
+content = "教师团队总结"
 ```
 
 **注意**: 使用 `[[lecturers.items]]` 而非旧的 `[[lecturers]]`
